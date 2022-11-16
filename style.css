@@ -1,0 +1,47 @@
+main{
+    display:grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-areas:
+    "h h h"
+    "n n n"
+    "a a as"
+    "f f f";
+}
+header{
+    grid-area: h;
+}
+nav{
+    grid-area: n;
+}
+article{
+    grid-area: a;
+    display:grid;
+    gap: 5px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+}
+aside{
+    grid-area: as;
+}
+footer{
+    grid-area: f;
+}
+header, nav, article,footer,aside {
+    border:1px solid black;
+    padding: 10px
+}
+article div img{
+    width: 100%;
+    max-width: 400px;
+}
+@media screen and (max-width:500px) {
+    main{
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-areas:
+        "h h h"
+        "n n n"
+        "as as as"
+        "a a a"
+        "f f f";
+}
+    
+}
