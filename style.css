@@ -1,4 +1,6 @@
 main{
+    background-color:lightblue;
+    color:darkslategray;
     display:grid;
     grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas:
@@ -30,8 +32,27 @@ header, nav, article,footer,aside {
     padding: 10px
 }
 article div img{
+    border:2px solid black;
     width: 100%;
     max-width: 400px;
+}
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+a:link{
+    text-decoration: none;
+    color:black;
+    cursor:grab;
+}
+a:hover{
+    text-decoration: none;
+    color:cornflowerblue;
+
+}
+.ar{
+    text-align: right;
+    color:black;
 }
 @media screen and (max-width:500px) {
     main{
@@ -45,3 +66,60 @@ article div img{
 }
     
 }
+@media screen and (max-width:700px) {
+    main{
+        background-color: lavender;
+    }
+    article{
+        grid-template-columns: 2fr 2fr;
+        color:teal;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: calc(8px + 2vw);
+
+}
+    article div img{
+        max-width: 100%;
+        border:2px solid black;
+        margin: 4px;
+}
+    
+}
+@media screen and (max-width:500px) {
+    main{
+        background-color:tan;
+        color:darkslategrey;
+        font-size: calc(6px + 2vw);
+        grid-template-columns: 1fr 2fr 2fr;
+        grid-template-areas:
+        "h h h"
+        "as as as"
+        "n n n"
+        "a a a"
+        "f f f";
+}
+    article{
+        grid-template-columns: 2fr;
+        color:darkslategrey;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: calc(10px + 2vw);
+        padding: 5px;
+    }
+    article div img{
+        border:2px solid black;
+        margin:4px;
+        overflow: hidden;
+    }
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    header{
+        text-align: center;
+    }
+    aside{
+        text-align: center; 
+    }
+}
+
+    
+
